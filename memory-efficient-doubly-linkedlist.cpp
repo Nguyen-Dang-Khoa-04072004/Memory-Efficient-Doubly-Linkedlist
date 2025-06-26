@@ -79,7 +79,7 @@ class MemoryEfficientLinkedList{
                     this->currentNode = this->list->tail;
                 }
         };
-        BaseIterator * iterator;
+
         MemoryEfficientLinkedList(){
             this->size = 0;
             this->head = nullptr;
@@ -99,17 +99,16 @@ class MemoryEfficientLinkedList{
                 previousNode = currentNode;
                 currentNode = nextNode;
             }
-            delete previousNode;
-
+            delete currentNode;
         }
         
-        BaseIterator * getBackwardIterator(){
-            return new BackwardIterator(this);
+        BaseIterator  getBackwardIterator(){
+            return BackwardIterator(this);
         }
 
 
-        BaseIterator * getForwardIterator(){
-            return new ForwardIterator(this);
+        BaseIterator  getForwardIterator(){
+            return ForwardIterator(this);
         }
 
 
