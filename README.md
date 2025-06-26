@@ -56,7 +56,7 @@ int main(){
     list.push_back(1);
     list.push_back(2);
     list.push_back(3);
-    MemoryEfficientLinkedList<int>::BaseIterator it = isReverse ? list.getBackwardIterator() : list.getForwardIterator();
+    MemoryEfficientLinkedList<int>::BaseIterator it = list.getBackwardIterator() : list.getForwardIterator();
     while(it.hasNext()){
         cout<<it.getValue()<<" ";
         it.next();
