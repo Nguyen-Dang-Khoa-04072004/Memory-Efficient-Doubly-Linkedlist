@@ -12,4 +12,8 @@ This means every node in a typical doubly linked list contains:
 - In a memory-efficient implementation, we only store the XOR of the previous and next pointers, using the bitwise exclusive OR (⊕) operation.
 With this approach, we can still traverse the list in both directions using just one pointer field per node.
 
+![list](images/list.png)
+
 # Why does it work?
+
+![why does it work ?](images/work.png)
